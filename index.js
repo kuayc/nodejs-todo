@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 let task = ["find a job", "attend college"];
-let complete = ["finished high school"];
+let complete = ["finished high school", "applied for college"];
 
 app.post("/addtask", function(req, res) {
   let newTask = req.body.newtask;
