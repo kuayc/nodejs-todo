@@ -7,11 +7,11 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 let task = ["find a job", "attend college"];
-let complete = ["finished high school", "applied for college"];
+let complete = ["finish high school", "apply college"];
 
 app.post("/addtask", function(req, res) {
   let newTask = req.body.newtask;
-  task.push(newTask);
+  task.unshift(newTask);
   res.redirect("/");
 });
 
@@ -34,5 +34,5 @@ app.get("/", function(req, res) {
 });
 
 app.listen(3000, function() {
-  console.log("server is running on port 3000");
+  console.log("skynet port 3000");
 });
